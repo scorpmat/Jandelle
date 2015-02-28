@@ -351,16 +351,58 @@
                                 Proposée en cuivre rouge massif, martelé et poli brillant, étamé à l'intérieur.
                             </div>
 
+                            <div class="mb-30">
+                                <button type="button" class="btn btn-mod btn-large btn-round" data-toggle="modal" data-target="#myModal">Demande de devis</button>
+                            </div>
+
                             <img src="images/portfolio/clotilde-mesure.png">
 
                             <br><br>
 
-                            <div class="mb-30">
-                                <form method="post" action="#" class="form">
-                                    <a href="clotilde.html#" class="btn btn-mod btn-large btn-round">Demande de devis</a>
-                                </form>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Demande de devis</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="post" action="#" id="form" role="form" class="form">
+
+                                                <div class="mb-20 mb-md-10">
+                                                    <!-- Name -->
+                                                    <input type="text" name="Nom" id="Nom" class="input-md form-control" placeholder="Name" maxlength="100">
+                                                </div>
+                                                <div class="mb-20 mb-md-10">
+                                                    <select class="input-md form-control">
+                                                        <option>Professionel</option>
+                                                        <option>Particulier</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-20 mb-md-10">
+                                                    <!-- Email -->
+                                                    <input type="email" name="Email" id="Email" class="input-md form-control" placeholder="Email" maxlength="100">
+                                                </div>
+
+                                                <div class="mb-20 mb-md-10">
+                                                    <textarea name="text" id="Description" class="input-md form-control" rows="8" placeholder="Décrivez votre projet nous vous répondrons à toutes vos questions." maxlength="400"></textarea>
+                                                </div>
+
+                                                <select class="input-md form-control">
+                                                    <option>Cuivre</option>
+                                                    <option>Laiton</option>
+                                                    <option>Bronze</option>
+                                                </select>
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Envoyer</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            
+
                         </div>
                         <!-- End Product Description -->
 
@@ -752,7 +794,13 @@
         <!-- JS -->
         <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/bootstrap.min.js"></script>        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/SmoothScroll.js"></script>
         <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/jquery.scrollTo.min.js"></script>
         <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/jquery.localScroll.min.js"></script>
@@ -774,6 +822,12 @@
         <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/all.js"></script>
         <script type="text/javascript" src="http://rhythm.bestlooker.pro/js/contact-form.js"></script>        
         <!--[if lt IE 10]><script type="text/javascript" src="http://rhythm.bestlooker.pro/js/placeholder.js"></script><![endif]-->
-        
+
+
+    <script type="application/javascript">
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+    </script>
     </body>
 </html>
